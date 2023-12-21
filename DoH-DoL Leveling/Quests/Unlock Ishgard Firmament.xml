@@ -8,7 +8,7 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 	<Name>Unlock The Ishgard Firmament</Name>
 	<Order>
 
-	<RunCode Name="SwitchCombatJob"/>
+	<!--<RunCode Name="SwitchCombatJob"/> -->
 		
 	<If Condition="not IsQuestCompleted(67783)"><!-- Check to See if Litany of Peace is completed. -->
 		<RunCode Name="Profile2"/>
@@ -17,7 +17,8 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 	</If>
 		<If Condition="IsQuestCompleted(67783) and not HasQuest(69208) and not IsQuestCompleted(69208)"><!-- Pickup Firmament Quest -->
 			<GetTo ZoneId="418" XYZ="-73.0267, 9.244665, 17.78088"/>
-			<RunCode Name="SwitchCombatJob"/>
+				<!--<RunCode Name="SwitchCombatJob"/> -->
+
 			<If Condition="IsQuestAcceptQualified(69208)">
 				<LLPickupQuest NpcId="2010850" QuestId="69208" XYZ="-73.0267, 9.244665, 17.78088"/>
 				<LLSmallTalk WaitTime="1500"/>
@@ -81,13 +82,6 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 			<LLSmallTalk WaitTime="1500"/>
 			<WaitTimer WaitTime="3"/>
 			<WaitTimer WaitTime="2"/>
-			<RunCode Name="SwitchDoHJob"/>
-			<WaitTimer WaitTime="2"/>
-			<MoveTo ZoneId="886" XYZ="50.83703, -16, 168.3313"/>
-			<LLTalkTo NpcId="1031677" XYZ="50.83703, -16, 168.3313" InteractDistance="5" UseMesh="False"/>
-			<LLSmallTalk WaitTime="1500"/>
-			<WaitTimer WaitTime="3"/>
-			<WaitTimer WaitTime="2"/>
 			<RunCode Name="SwitchDoLJob"/>
 			<WaitTimer WaitTime="2"/>
 			<MoveTo ZoneId="886" XYZ="-20.24542, -16, 141.1501"/>
@@ -95,34 +89,10 @@ Requirement: MSQ Litany of Peace completed, level 20 DoH to add new crafts to cr
 			<LLSmallTalk WaitTime="1500"/>
 		</If>
 		
-		<RunCode Name="SwitchCombatJob"/>
+		<!--<RunCode Name="SwitchCombatJob"/> -->
+
 		
-		<!-- Ascending to Empyreum -->
-		<If Condition="IsQuestCompleted(67783) and not IsQuestCompleted(69708)">
-		  <If Condition="not HasQuest(69708)">
-			<GetTo ZoneId="418" XYZ="-64.50623, 8.113304, 30.64428"/> 
-			<If Condition="IsQuestAcceptQualified(69708)">
-			  <LLPickupQuest QuestId="69708" NpcId="1012155"/>
-			  <LLSmallTalk/>
-			</If>
-		  </If>
-		</If>
-		<If Condition="GetQuestStep(69708) == 1">
-		  <GetTo ZoneId="418" XYZ="150.8885, -20, 63.97537"/> 
-		  <LLTalkTo NpcId="1031682" XYZ="152.9716, -20, 63.76746" QuestId="69708" StepId="1"/>
-		</If>
-		<If Condition="GetQuestStep(69708) == 2">
-		  <WaitWhile condition="GetQuestStep(69708) == 2"/>
-		</If>
-		<If Condition="GetQuestStep(69708) == 3">
-		  <MoveTo XYZ="19.0048, -16, 160.9244"/> 
-		  <LLTalkTo NpcId="1039506" XYZ="20.40125, -16, 159.9603" QuestId="69708" StepId="3"/>
-		</If>
-		<If Condition="GetQuestStep(69708) == 255">
-		  <GetTo ZoneId="418" XYZ="-64.07493, 8.113304, 30.37012"/> 
-		  <LLTurnIn QuestId="69708" NpcId="1012155" XYZ="-63.21814, 8.25915, 28.73267"/>
-		  <LLSmallTalk/>
-		</If>		
+
 		
 		<LLoadProfile Path="../Start.xml"/>
 		

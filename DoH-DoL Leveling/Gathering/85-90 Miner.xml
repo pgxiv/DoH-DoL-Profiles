@@ -22,7 +22,7 @@ Angles24
 		<!-- Level 85-87 -->
 		<If Condition="Core.Player.ClassLevel &lt; 87">
 			<LogMessage Message="Starting the Grind to Level 87."/>
-			<Lisbeth Json="[{'Group':0, 'Item':36089, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':87, 'ConditionalJob':'Botanist'},{'Group':0, 'Item':36205, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':87, 'ConditionalJob':'Botanist'}]"/> <!-- Scarlet Moko Grass, Giant Popoto -->
+			<Lisbeth Json="[{'Group':0, 'Item':36089, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':4635, 'ConditionalLevel':87, 'ConditionalJob':'Botanist'},{'Group':0, 'Item':36205, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':4635, 'ConditionalLevel':87, 'ConditionalJob':'Botanist'}]"/> <!-- Scarlet Moko Grass, Giant Popoto -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 87">
 			<LogMessage Message="Congrats on Level 87, moving on."/>
@@ -35,7 +35,7 @@ Angles24
 		<!-- Level 88-89 -->
 		<If Condition="Core.Player.ClassLevel &lt; 89">
 			<LogMessage Message="Starting the Grind to Level 89."/>
-			<Lisbeth Json="[{'Group':0, 'Item':36165, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':89, 'ConditionalJob':'Miner'}]"/> <!-- Manganese Ore -->
+			<Lisbeth Json="[{'Group':0, 'Item':36165, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':4635, 'ConditionalLevel':89, 'ConditionalJob':'Miner'}]"/> <!-- Manganese Ore -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 89">
 			<LogMessage Message="Congrats on Level 89, moving on."/>
@@ -48,7 +48,7 @@ Angles24
 		<!-- Level 89-90 -->
 		<If Condition="Core.Player.ClassLevel &lt; 90">
 			<LogMessage Message="Starting the Grind to Level 90."/>
-			<Lisbeth Json="[{'Group':0, 'Item':36178, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':90, 'ConditionalJob':'Miner'},{'Group':0, 'Item':36166, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':90, 'ConditionalJob':'Miner'}]"/> <!-- Chondrite, Raw Star Quartz -->
+			<Lisbeth Json="[{'Group':0, 'Item':36178, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':4635, 'ConditionalLevel':90, 'ConditionalJob':'Miner'},{'Group':0, 'Item':36166, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':4635, 'ConditionalLevel':90, 'ConditionalJob':'Miner'}]"/> <!-- Chondrite, Raw Star Quartz -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 90">
 			<LogMessage Message="Congrats on Level 90, moving on."/>
