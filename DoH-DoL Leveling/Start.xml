@@ -41,6 +41,43 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 	<DisablePlugin Name="Enable Flight"/>
 	
 
+<!--Unlocking Miner-->
+    <If Condition="not IsQuestCompleted(65728)">
+		<If Condition="not HasQuest(65728)">
+			<GetTo ZoneId="131" XYZ="1.417394, 7.599999, 153.6795"/>
+				<If Condition="IsQuestAcceptQualified(65728)">
+					<LLTalkTo NpcId="1002282" QuestId="65728" XYZ="1.417394, 7.599999, 153.6795"/>
+					<LLSmallTalk WaitTime="1500"/>
+				</If>
+			<!--</If>-->
+		</If>
+	</If>
+    <If Condition="not IsQuestCompleted(66133)">
+		<If Condition="not HasQuest(66133)">
+			<GetTo ZoneId="131" XYZ="1.417394, 7.599999, 153.6795"/>
+				<If Condition="IsQuestAcceptQualified(66133)">
+					<LLPickupQuest NpcId="1002282" QuestId="66133" XYZ="1.417394, 7.599999, 153.6795"/>
+					<LLSmallTalk WaitTime="1500"/>
+				</If>
+		</If>
+			<If Condition="HasQuest(66133)">
+				<If Condition="GetQuestStep(66133) == 255">
+					<GetTo ZoneId="131" XYZ="-16.52736, 6.2, 157.8005"/>
+					<LLTurnIn QuestId="66133" StepId="255" NpcId="1002298" InteractDistance="1.0" XYZ="-16.52736, 6.2, 157.8005"/>
+					<LLSmallTalk WaitTime="1500"/>
+					<WaitTimer WaitTime="2"/>
+						<If Condition="ClassName != ClassJobType.Miner">
+							<ChangeClass Job="Miner"/>
+						</If>
+						<If Condition="ClassName == ClassJobType.Miner">
+							<AutoInventoryEquip/>
+						<WaitTimer WaitTime="5"/>
+						</If>
+				</If>
+			</If>
+    </If>
+
+<!--Done Unlocking Miner-->
 			
 		
 		<!-- Check to see if we have Gathering at level 21 -->
